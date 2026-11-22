@@ -20,12 +20,6 @@
 
 ---
 
-### Adding a Custom Monitored Target
-![Add Connection Modal](assets/add-connection.png)
-*Interactive modal allowing operators to register custom hostnames or IPs for continuous connectivity health checks.*
-
----
-
 ### Network Interface Statistics & Throughput
 ![Network Stats](assets/network-stats.png)
 *Live throughput rates, total bytes sent/received, packet rates, and drop/error diagnostics across all network interfaces.*
