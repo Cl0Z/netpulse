@@ -126,7 +126,7 @@ netpulse/
 │   ├── routers/                # API route handlers (metrics, connections)
 │   └── main.py                 # Application entry point & CORS configuration
 ├── database/                   # Containerized persistence
-│   └── compose.yml             # PostgreSQL 17 Docker Compose file
+│   └── compose.example.yml     # PostgreSQL 17 Docker Compose template
 ├── frontend/                   # React + TypeScript dashboard
 │   ├── public/                 # Static assets & icons
 │   └── src/
@@ -162,9 +162,17 @@ cd netpulse
 
 ---
 
-### Step 2: Configure Environment Variables
+### Step 2: Configure Environment & Database
 
-#### Backend Configuration
+#### 1. Database Setup (Docker)
+Copy the example compose file and start the PostgreSQL container:
+```bash
+cp database/compose.example.yml database/compose.yml
+# (Optional) Edit POSTGRES_PASSWORD in database/compose.yml
+docker compose -f database/compose.yml up -d
+```
+
+#### 2. Backend Configuration
 Create `backend/.env`:
 ```env
 DATABASE_URL=postgresql://netpulse:your_secure_password@localhost:5432/netpulse

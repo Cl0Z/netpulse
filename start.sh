@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_DIR="$HOME/netpulse"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 BACKEND_DIR="$PROJECT_DIR/backend"
 AGENT_DIR="$PROJECT_DIR/agent"
